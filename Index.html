@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Fibonacci</title>
+
+<style>
+  :root{
+    --bg:#0f1724;
+    --card:#0b1220;
+    --accent1:#7ee787;
+    --accent2:#7cc4ff;
+    --muted:#9aa7b2;
+    --glass: rgba(255,255,255,0.04);
+    --radius:16px;
+    --max-width:900px;
+    font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    min-height:100vh;
+    background:
+      radial-gradient(1200px 400px at 10% 10%, rgba(124,195,255,0.06), transparent 8%),
+      radial-gradient(900px 300px at 90% 70%, rgba(126,231,135,0.03), transparent 8%),
+      linear-gradient(180deg,#07101a 0%, #071827 40%, #0b1320 100%);
+    color:#e6f0f2;
+    padding:32px 20px;
+    display:flex;
+    justify-content:center;
+  }
+  .container{
+    width:100%;
+    max-width:var(--max-width);
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+  }
+  header.hero{
+    background: linear-gradient(90deg, rgba(124,195,255,0.06), rgba(126,231,135,0.04));
+    border-radius:var(--radius);
+    padding:20px 24px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.03);
+    box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+  }
+  h1{margin:0;font-size:22px;color:var(--accent2)}
+
+  .menu-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .menu-btn{
+    display:block;
+    padding:18px 20px;
+    background:var(--glass);
+    border:1px solid rgba(255,255,255,0.05);
+    border-radius:var(--radius);
+    text-align:center;
+    color:#e6f0f2;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+    box-shadow:0 8px 30px rgba(0,0,0,0.4);
+    transition:0.3s;
+  }
+  .menu-btn:hover{
+    transform:translateY(-4px);
+    background:rgba(255,255,255,0.07);
+    box-shadow:0 8px 35px rgba(0,0,0,0.6);
+  }
+
+  /* CALCULADORA */
+  .calc-box{
+    background:var(--glass);
+    padding:20px;
+    border-radius:var(--radius);
+    border:1px solid rgba(255,255,255,0.05);
+    box-shadow:0 8px 30px rgba(0,0,0,0.4);
+  }
+  label{
+    font-size:16px;
+    font-weight:600;
+  }
+  input{
+    width:100%;
+    padding:12px;
+    border-radius:12px;
+    border:none;
+    margin-top:6px;
+    font-size:16px;
+    outline:none;
+    background:#1a2433;
+    color:white;
+  }
+  button{
+    width:100%;
+    padding:12px;
+    margin-top:12px;
+    background:linear-gradient(90deg, var(--accent2), var(--accent1));
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    color:#062020;
+  }
+  button:hover{
+    filter:brightness(1.1);
+  }
+
+  pre{
+    white-space:pre-wrap;
+    background:#0b1220;
+    padding:16px;
+    border-radius:12px;
+    margin-top:18px;
+    font-size:15px;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Título -->
+  <header class="hero">
+    <h1>Menu – Sequência de Fibonacci</h1>
+  </header>
+
+  <!-- MENU -->
+  <div class="menu-grid">
+    <a class="menu-btn" href="p1.html">1. Quem foi Fibonacci?</a>
+    <a class="menu-btn" href="p2.html">2. Definição da sequência e Termos até a 15ª casa</a>
+    <a class="menu-btn" href="p3.html">3. Aplicações no dia a dia</a>
+    <a class="menu-btn" href="p4.html">4. O problema dos coelhos</a>
+    <a class="menu-btn" href="p5.html">5. O que é a razão áurea?</a>
+    <a class="menu-btn" href="p6.html">6. Conexão da razão áurea e da sequência</a>
+    <a class="menu-btn" href="p7.html">7. Espiral de Fibonacci</a>
+  </div>
+
+  <!-- CALCULADORA -->
+  <div class="calc-box">
+      <label>Digite um número (N):</label>
+      <input type="number" id="n" min="0" value="10">
+
+      <button onclick="calcularFibonacci()">Calcular Fibonacci</button>
+
+      <pre id="resultado"></pre>
+  </div>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+  function calcularFibonacci() {
+      const n = parseInt(document.getElementById("n").value);
+      if (isNaN(n) || n < 0) {
+          document.getElementById("resultado").textContent = "Digite um número válido.";
+          return;
+      }
+
+      let fib = [0, 1];
+      for (let i = 2; i <= n; i++) {
+          fib[i] = fib[i-1] + fib[i-2];
+      }
+
+      document.getElementById("resultado").textContent =
+          "Sequência até N:\n" + fib.join(", ") +
+          "\n\nValor de Fibonacci(" + n + ") = " + fib[n];
+  }
+</script>
+
+</body>
+</html>

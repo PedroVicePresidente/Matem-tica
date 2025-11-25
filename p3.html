@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Pergunta 3</title>
+
+<style>
+  :root{--bg:#0f1724;--card:#0b1220;--accent1:#7ee787;--accent2:#7cc4ff;--muted:#9aa7b2;--glass:rgba(255,255,255,0.04);--radius:16px;--max-width:900px;font-family:Inter,"Segoe UI",sans-serif}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;background:
+    radial-gradient(1200px 400px at 10% 10%, rgba(124,195,255,0.06), transparent 8%),
+    radial-gradient(900px 300px at 90% 70%, rgba(126,231,135,0.03), transparent 8%),
+    linear-gradient(180deg,#07101a,#071827 40%,#0b1320 100%);
+    color:#e6f0f2;padding:32px 20px;display:flex;justify-content:center}
+  .container{max-width:var(--max-width);width:100%;display:flex;flex-direction:column;gap:28px}
+  .card{background:var(--glass);padding:20px;border-radius:16px}
+  h1{color:var(--accent2)}
+
+  .block{
+    background:var(--glass);
+    padding:12px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.02);
+    font-size:14px;
+  }
+
+  .muted{
+    background:var(--glass);
+    padding:20px;
+    border-radius:var(--radius);
+    border:1px solid rgba(255,255,255,0.05);
+    box-shadow:0 8px 30px rgba(0,0,0,0.4);
+  }
+  h2{margin:0 0 10px;color:var(--accent2)}
+  p{color:#d6e1e6;font-size:15px;line-height:1.5}
+
+  @media (max-width:740px){
+   .info-grid{grid-template-columns:1fr}
+  }
+
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div class="card">
+    <h1>Pergunta 3</h1>
+    <p><strong>Aplicação do Dia a Dia.</strong></p>
+  </div>
+      <section>
+      <h2>3) Onde é aplicada a sequência no dia a dia?</h2>
+      <div class="info-grid">
+        <div class="block">
+          <h3>Na natureza</h3>
+          <p class="muted">Arranjos de pétalas, padrões de sementes (ex.: girassol), conchas e galáxias aproximam-se da sequência/razão áurea.</p>
+        </div>
+
+        <div class="block">
+          <h3>Tecnologia e design</h3>
+          <p class="muted">Usada em algoritmos (ex.: árvores binárias), compressão, e composição visual (design, fotografia) via proporções agradáveis.</p>
+        </div>
+
+        <div class="block">
+          <h3>Finanças e modelagem</h3>
+          <p class="muted">Alguns traders usam níveis de Fibonacci como referência (embora controverso e não seguro).</p>
+        </div>
+
+        <div class="block">
+          <h3>Computação</h3>
+          <p class="muted">Estruturas e algoritmos recursivos, geração de sequências pseudo-aleatórias e testes de desempenho.</p>
+        </div>
+      </div>
+    </section>
+
+</div>
+</body>
+</html>

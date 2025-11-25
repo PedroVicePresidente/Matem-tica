@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Pergunta 1</title>
+
+<style>
+  /* --- SEU CSS COMPLETO AQUI --- */
+  :root{
+    --bg:#0f1724;
+    --card:#0b1220;
+    --accent1:#7ee787;
+    --accent2:#7cc4ff;
+    --muted:#9aa7b2;
+    --glass: rgba(255,255,255,0.04);
+    --radius:16px;
+    --max-width:900px;
+    font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    min-height:100vh;
+    background:
+      radial-gradient(1200px 400px at 10% 10%, rgba(124,195,255,0.06), transparent 8%),
+      radial-gradient(900px 300px at 90% 70%, rgba(126,231,135,0.03), transparent 8%),
+      linear-gradient(180deg,#07101a 0%, #071827 40%, #0b1320 100%);
+    color:#e6f0f2;
+    padding:32px 20px;
+    display:flex;
+    justify-content:center;
+  }
+  .container{
+    width:100%;
+    max-width:var(--max-width);
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+  }
+  .card{
+    background:var(--glass);
+    padding:20px;
+    border-radius:var(--radius);
+    border:1px solid rgba(255,255,255,0.05);
+    box-shadow:0 8px 30px rgba(0,0,0,0.4);
+  }
+  h1{margin:0 0 10px;color:var(--accent2)}
+  p{color:#d6e1e6;font-size:15px;line-height:1.5}
+
+    .muted{
+    background:var(--glass);
+    padding:20px;
+    border-radius:var(--radius);
+    border:1px solid rgba(255,255,255,0.05);
+    box-shadow:0 8px 30px rgba(0,0,0,0.4);
+  }
+  h2{margin:0 0 10px;color:var(--accent2)}
+  p{color:#d6e1e6;font-size:15px;line-height:1.5}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div class="card">
+    <h1>Pergunta 1</h1>
+    <p><strong>Explique com suas palavras o que é a espiral de Fibonacci.</strong></p>
+  </div>
+  <section>
+    <div class="muted">
+        <h2>1) Quem foi Fibonacci?</h2>
+        <p class="muted">
+          Leonardo de Pisa, também chamado de <strong>Fibonacci</strong> (c. 1170 — c. 1250), foi um matemático italiano nascido em Pisa.
+          Ficou famoso por popularizar no Ocidente o sistema de numeração hindu-arábico (que usamos hoje) e por estudar a sequência que
+          hoje leva seu nome. Seu livro mais conhecido é o <em>Liber Abaci</em> (1202), onde aparece o famoso problema dos coelhos que
+          introduz a sequência.
+        </p>
+  </section>
+</div>
+</body>
+</html>
