@@ -17,7 +17,41 @@
     --max-width:900px;
     font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
+
+
+.back-button {
+  display: inline-flex; /* Permite que o link se comporte como um bloco, mas se ajuste ao conteúdo */
+  align-items: center;
+  gap: 8px; /* Espaço entre o ícone e o texto */
+  padding: 10px 18px;
+  background: var(--accent1); /* Cor de destaque para o fundo */
+  color: var(--bg); /* Cor escura para o texto no fundo claro */
+  text-decoration: none; /* Remove o sublinhado padrão do link */
+  border-radius: 8px; /* Bordas arredondadas */
+  font-weight: 600; /* Texto mais encorpado */
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s, transform 0.1s;
+  align-self: flex-start; /* Alinha o botão à esquerda dentro do container flex */
+}
+
+.back-button:hover {
+  background: #66d470; /* Um tom ligeiramente mais escuro ao passar o mouse */
+  transform: translateY(-1px); /* Pequeno efeito de elevação */
+}
+
+.back-button:active {
+  transform: translateY(0); /* Retorna ao estado normal ao clicar */
+}
+
+/* Estiliza o ícone de seta (pode ser um emoji ou um ícone real) */
+.back-button span {
+  font-size: 18px;
+  line-height: 1;
+}
+
   *{box-sizing:border-box}
+
   body{
     margin:0;
     min-height:100vh;
@@ -61,6 +95,9 @@
 
 <body>
 <div class="container">
+    <a href="index.html" class="back-button">
+    <span>&#x2190;</span> Voltar para a Página Principal
+    </a>
   <div class="card">
     <h1>Pergunta 1</h1>
     <p><strong>Explique com suas palavras o que é a espiral de Fibonacci.</strong></p>
